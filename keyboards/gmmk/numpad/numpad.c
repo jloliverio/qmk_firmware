@@ -15,7 +15,7 @@
  */
 
 #include "numpad.h"
-#define RGB_MATRIX_ENABLE
+
 #ifdef RGB_MATRIX_ENABLE
 
 const aw_led g_aw_leds[DRIVER_LED_TOTAL] = {
