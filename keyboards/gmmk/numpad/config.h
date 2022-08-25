@@ -65,7 +65,7 @@
 
 #define DRIVER_COUNT 1
 
-#define DRIVER_1_LED_TOTAL 33
+#define DRIVER_1_LED_TOTAL 31
 #define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL)
 
 /* External spi flash */
