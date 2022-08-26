@@ -54,10 +54,6 @@
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
 
-/* External spi flash */
-#define EXTERNAL_FLASH_SPI_SLAVE_SELECT_PIN B14
-#define WEAR_LEVELING_BACKING_SIZE 2048
-
 /* SPI Config for LED Driver */
 #define SPI_DRIVER SPIDQ
 #define SPI_SCK_PIN A5
@@ -65,14 +61,16 @@
 #define SPI_MISO_PIN A6
 
 #define DRIVER_1_CS A15
-#define DRIVER_2_CS B15
 #define DRIVER_1_EN C13
-#define DRIVER_2_EN C13
 
-#define DRIVER_COUNT 2
-#define DRIVER_1_LED_TOTAL 66
-#define DRIVER_2_LED_TOTAL 54
-#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+#define DRIVER_COUNT 1
+
+#define DRIVER_1_LED_TOTAL 31
+#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL)
+
+/* External spi flash */
+#define EXTERNAL_FLASH_SPI_SLAVE_SELECT_PIN B14
+#define WEAR_LEVELING_BACKING_SIZE 2048
 
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
