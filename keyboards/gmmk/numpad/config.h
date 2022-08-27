@@ -63,6 +63,8 @@
 #define DRIVER_1_CS B12
 #define DRIVER_1_EN A15
 
+#define RGB_MATRIX_PW_EN B13
+
 #define DRIVER_COUNT 1
 
 #define DRIVER_1_LED_TOTAL 31
