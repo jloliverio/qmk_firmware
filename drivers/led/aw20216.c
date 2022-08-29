@@ -112,6 +112,10 @@ static inline void AW20216_soft_enable(pin_t cs_pin) {
 }
 
 void AW20216_init(pin_t cs_pin, pin_t en_pin) {
+#ifdef RGB_MATRIX_PW_EN
+    setPinOutput(RGB_MATRIX_PW_EN);
+    writePinHigh(RGB_MATRIX_PW_EN);
+#endif // RGB_MATRIX_PW_EN
     setPinOutput(en_pin);
     writePinHigh(en_pin);
 

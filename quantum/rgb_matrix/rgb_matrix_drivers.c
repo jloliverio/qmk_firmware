@@ -309,6 +309,10 @@ const rgb_matrix_driver_t rgb_matrix_driver = {
 static void init(void) {
     spi_init();
 
+#ifdef RGB_MATRIX_PW_EN
+    setPinOutput(RGB_MATRIX_PW_EN);
+    writePinHigh(RGB_MATRIX_PW_EN);
+#endif // RGB_MATRIX_PW_EN
     AW20216_init(DRIVER_1_CS, DRIVER_1_EN);
 #    if defined(DRIVER_2_CS)
     AW20216_init(DRIVER_2_CS, DRIVER_2_EN);
