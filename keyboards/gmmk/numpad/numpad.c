@@ -128,9 +128,37 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 }
 #endif
 
-void keyboard_post_init_user() {
+void keyboard_pre_init_user(void) {
 #ifdef RGB_MATRIX_PW_EN
     setPinOutput(RGB_MATRIX_PW_EN);
     writePinHigh(RGB_MATRIX_PW_EN);
-#endif // RGB_MATRIX_PW_EN
+#endif
+}
+
+void keyboard_post_init_user() {
+  //rgblight_enable_noeeprom(); // enables Rgb, without saving settings
+  //rgblight_sethsv_noeeprom(HSV_MAGENTA); // sets the color to teal/cyan without saving
+  //rgblight_mode_noeeprom(RGBLIGHT_MODE_BREATHING + 3); // sets mode to Fast breathing without saving
+}
+
+bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+  // If console is enabled, it will print the matrix position and status of each key pressed
+#ifdef CONSOLE_ENABLE
+    if (rgb_matrix_is_enabled()) {
+        #ifdef CONSOLE_ENABLE
+          uprintf("RGB is enabled \n");
+          uprintf("RGB MATRIX MODE: ");
+          uprintf("%u \n",rgb_matrix_get_mode());
+          uprintf("RGB MATRIX VALUE: ");
+          uprintf("%u \n",rgb_matrix_get_val());
+        #endif
+    }
+    else if(!rgb_matrix_is_enabled()) {
+        #ifdef CONSOLE_ENABLE
+          uprintf("RGB is NOT enabled \n");
+        #endif
+    }
+    // uprintf("KL: kc: 0x%04X, col: %2u, row: %2u, pressed: %u, time: %5u, int: %u, count: %u\n", keycode, record->event.key.col, record->event.key.row, record->event.pressed, record->event.time, record->tap.interrupted, record->tap.count);
+#endif 
+    return true;
 }
