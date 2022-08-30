@@ -480,11 +480,6 @@ __attribute__((weak)) void rgb_matrix_indicators_advanced_user(uint8_t led_min, 
 void rgb_matrix_init(void) {
     rgb_matrix_driver.init();
 
-#ifdef RGB_MATRIX_PW_EN
-    setPinOutput(RGB_MATRIX_PW_EN);
-    writePinHigh(RGB_MATRIX_PW_EN);
-#endif // RGB_MATRIX_PW_EN
-
 #ifdef RGB_MATRIX_KEYREACTIVE_ENABLED
     g_last_hit_tracker.count = 0;
     for (uint8_t i = 0; i < LED_HITS_TO_REMEMBER; ++i) {

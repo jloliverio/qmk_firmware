@@ -245,8 +245,7 @@ __attribute__((weak)) void keyboard_pre_init_kb(void) {
  * FIXME: needs doc
  */
 
-__attribute__((weak)) void keyboard_post_init_user() {
-}
+__attribute__((weak)) void keyboard_post_init_user() {}
 
 /** \brief keyboard_post_init_kb
  *
