@@ -26,16 +26,16 @@
 #define PRODUCT GMMK Numpad
 
 /* key matrix size */
-#define MATRIX_ROWS 14
-#define MATRIX_COLS 8
+#define MATRIX_ROWS 5
+#define MATRIX_COLS 4
 
 #define MATRIX_ROW_PINS \
-    { B0, B1, B2, B3, B4, B5, B6, B7, B8, B9, B10, B11, B12, B13 }
+  { A0, A1, A2, A3, A4 }
 #define MATRIX_COL_PINS \
-    { A0, A1, A2, A3, A4, A8, A9, A10 }
+  { B0, B1, B2, B3 }
 
 /* COL2ROW or ROW2COL */
-#define DIODE_DIRECTION COL2ROW
+#define DIODE_DIRECTION ROW2COL
 
 /* Hold ESC on start up to clear EEPROM and boot into bootloader mode */
 #define BOOTMAGIC_LITE_ROW 0
