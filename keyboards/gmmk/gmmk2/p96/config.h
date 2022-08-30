@@ -42,12 +42,6 @@
 #define BOOTMAGIC_LITE_COLUMN 0
 
 #define TAP_CODE_DELAY 10
-#define ENCODERS_PAD_A \
-    { A1 }
-#define ENCODERS_PAD_B \
-    { A2 }
-
-#define SLIDER_PIN B0
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE

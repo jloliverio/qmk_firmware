@@ -130,6 +130,7 @@ bool encoder_update_kb(uint8_t index, bool clockwise) {
 
 void keyboard_pre_init_user(void) {
 #ifdef RGB_MATRIX_PW_EN
+    //setPinOutput_writeHigh(RGB_MATRIX_PW_EN);
     setPinOutput(RGB_MATRIX_PW_EN);
     writePinHigh(RGB_MATRIX_PW_EN);
 #endif
