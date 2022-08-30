@@ -47,7 +47,7 @@
 #define ENCODERS_PAD_B \
     { A2 }
 
-#define SLIDER_PIN B0
+#define SLIDER_PIN B0 //Not implemented
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
