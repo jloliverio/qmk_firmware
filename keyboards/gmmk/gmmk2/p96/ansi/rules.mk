@@ -20,4 +20,3 @@ RGB_MATRIX_ENABLE = yes      # Enable RGB matrix effects.
 RGB_MATRIX_DRIVER = AW20216  # Enable RGB matrix effects.
 EEPROM_DRIVER = wear_leveling
 WEAR_LEVELING_DRIVER = spi_flash
-ENCODER_ENABLE = yes
