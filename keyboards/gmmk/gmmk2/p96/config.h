@@ -18,6 +18,13 @@
 
 #include "config_common.h"
 
+/* USB Device descriptor parameter */
+#define DEVICE_VER 0x0001
+#define VENDOR_ID 0x320F
+#define PRODUCT_ID 0x5088
+#define MANUFACTURER Glorious
+#define PRODUCT GMMK Numpad
+
 /* key matrix size */
 #define MATRIX_ROWS 14
 #define MATRIX_COLS 8
@@ -35,17 +42,17 @@
 #define BOOTMAGIC_LITE_COLUMN 0
 
 #define TAP_CODE_DELAY 10
+#define ENCODERS_PAD_A \
+    { A1 }
+#define ENCODERS_PAD_B \
+    { A2 }
+
+#define SLIDER_PIN B0
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
 /* Locking resynchronize hack */
 #define LOCKING_RESYNC_ENABLE
-
-#define RGB_DISABLE_WHEN_USB_SUSPENDED
-
-/* External spi flash */
-#define EXTERNAL_FLASH_SPI_SLAVE_SELECT_PIN B14
-#define WEAR_LEVELING_BACKING_SIZE 2048
 
 /* SPI Config for LED Driver */
 #define SPI_DRIVER SPIDQ
@@ -54,14 +61,16 @@
 #define SPI_MISO_PIN A6
 
 #define DRIVER_1_CS A15
-#define DRIVER_2_CS B15
 #define DRIVER_1_EN C13
-#define DRIVER_2_EN C13
 
-#define DRIVER_COUNT 2
-#define DRIVER_1_LED_TOTAL 66
-#define DRIVER_2_LED_TOTAL 54
-#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL + DRIVER_2_LED_TOTAL)
+#define DRIVER_COUNT 1
+
+#define DRIVER_1_LED_TOTAL 31
+#define DRIVER_LED_TOTAL (DRIVER_1_LED_TOTAL)
+
+/* External spi flash */
+#define EXTERNAL_FLASH_SPI_SLAVE_SELECT_PIN B14
+#define WEAR_LEVELING_BACKING_SIZE 2048
 
 // RGB Matrix Animation modes. Explicitly enabled
 // For full list of effects, see:
@@ -112,8 +121,18 @@
 #define ENABLE_RGB_MATRIX_SOLID_SPLASH
 #define ENABLE_RGB_MATRIX_SOLID_MULTISPLASH
 
+/* 1000Hz USB polling - it's the default on stock firmware */
+#define USB_POLLING_INTERVAL_MS 1
+
+/* Send up to 4 key press events per scan */
+#define QMK_KEYS_PER_SCAN 4
+
 /* Set debounce time to 5ms */
 #define DEBOUNCE 5
 
 /* Force NKRO on boot up regardless of the setting saved in the EEPROM (uncomment to enable it) */
 // #define FORCE_NKRO
+
+// #define EARLY_INIT_PERFORM_BOOTLOADER_JUMP TRUE
+// #define EXTERNAL_FLASH_SPI_SLAVE_SELECT_PIN B12
+// #define EXTERNAL_FLASH_SIZE 8
