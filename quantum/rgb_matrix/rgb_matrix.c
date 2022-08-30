@@ -509,8 +509,6 @@ void rgb_matrix_init(void) {
         eeconfig_update_rgb_matrix_default();
     }
     eeconfig_debug_rgb_matrix(); // display current eeprom values
-
-    rgb_matrix_enable();
 }
 
 void rgb_matrix_set_suspend_state(bool state) {
