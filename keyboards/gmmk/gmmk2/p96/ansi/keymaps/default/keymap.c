@@ -36,11 +36,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 	),
   [1] = LAYOUT( 
     KC_NUM,  KC_PSLS,   KC_PAST,   KC_PMNS, 
-		KC_P7,   KC_P8,     KC_P9,     KC_PPLS, 
-		KC_P4,   _______,   KC_P6,     KC_CALC, 
-		KC_P1,   KC_P2,     KC_P3,     KC_PENT, 
-		KC_P0,                         QK_BOOT 
-	)
+    KC_P7,   RGB_VAI,     KC_P9,     KC_PPLS, 
+    RGB_RMOD,   _______,   RGB_MOD,     KC_CALC, 
+    KC_P1,   RGB_VAD,     KC_P3,     KC_PENT, 
+    RGB_TOG,                         QK_BOOT 
+  )
 };
 // clang-format on
 
