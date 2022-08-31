@@ -44,7 +44,7 @@ const aw_led g_aw_leds[DRIVER_LED_TOTAL] = {
     {0, CS7_SW7,  CS8_SW7,  CS9_SW7  },  //  13 3    , Y   <- Key S
     {0, CS7_SW8,  CS8_SW8,  CS9_SW8  },  //  14 ENTER, U   <- Key D
     {0, CS4_SW9,  CS5_SW9,  CS6_SW9  },  //  15 0    , 8   <- Key Shift_L
-    {0, CS7_SW9,  CS8_SW9,  CS9_SW9  },  //  16 .    , I   <- Key C
+    {0, CS7_SW9,  CS8_SW9,  CS9_SW9  },  //  16 .    , I   <- Key X
     {0, CS1_SW1,  CS2_SW1,  CS3_SW1  },  //  17 LED18, Esc
     {0, CS1_SW2,  CS2_SW2,  CS3_SW2  },  //  18 LED19, F1
     {0, CS1_SW3,  CS2_SW3,  CS3_SW3  },  //  19 LED20, F2
