@@ -28,23 +28,23 @@ const aw_led g_aw_leds[DRIVER_LED_TOTAL] = {
  *   |  |         G location
  *   |  |         |         B location
  *   |  |         |         | */
-    {0, CS4_SW1,  CS5_SW1,  CS6_SW1  },  //  0  NUM  , º
-    {0, CS4_SW2,  CS5_SW2,  CS6_SW2  },  //  1  /    , 1
-    {0, CS7_SW1,  CS8_SW1,  CS9_SW1  },  //  2  *    , Tab
-    {0, CS7_SW2,  CS8_SW2,  CS9_SW2  },  //  3  -    , Q
-    {0, CS4_SW3,  CS5_SW3,  CS6_SW3  },  //  4  7    , 2
-    {0, CS4_SW4,  CS5_SW4,  CS6_SW4  },  //  5  8    , 3
-    {0, CS7_SW3,  CS8_SW3,  CS9_SW3  },  //  6  9    , W
-    {0, CS7_SW4,  CS8_SW4,  CS9_SW4  },  //  7  +    , E
-    {0, CS4_SW5,  CS5_SW5,  CS6_SW5  },  //  8  4    , 4
-    {0, CS4_SW6,  CS5_SW6,  CS6_SW6  },  //  9  5    , 5
-    {0, CS7_SW5,  CS8_SW5,  CS9_SW5  },  //  10 6    , R
-    {0, CS4_SW7,  CS5_SW7,  CS6_SW7  },  //  11 1    , 6
-    {0, CS4_SW8,  CS5_SW8,  CS6_SW8  },  //  12 2    , 7
-    {0, CS7_SW7,  CS8_SW7,  CS9_SW7  },  //  13 3    , Y
-    {0, CS7_SW8,  CS8_SW8,  CS9_SW8  },  //  14 ENTER, U
-    {0, CS4_SW9,  CS5_SW9,  CS6_SW9  },  //  15 0    , 8
-    {0, CS7_SW9,  CS8_SW9,  CS9_SW9  },  //  16 .    , I
+    {0, CS4_SW1,  CS5_SW1,  CS6_SW1  },  //  0  NUM  , º   <- Key Esc
+    {0, CS4_SW2,  CS5_SW2,  CS6_SW2  },  //  1  /    , 1   <- Key F1
+    {0, CS7_SW1,  CS8_SW1,  CS9_SW1  },  //  2  *    , Tab <- Key F2
+    {0, CS7_SW2,  CS8_SW2,  CS9_SW2  },  //  3  -    , Q   <- Key F3
+    {0, CS4_SW3,  CS5_SW3,  CS6_SW3  },  //  4  7    , 2   <- Key º
+    {0, CS4_SW4,  CS5_SW4,  CS6_SW4  },  //  5  8    , 3   <- Key 1
+    {0, CS7_SW3,  CS8_SW3,  CS9_SW3  },  //  6  9    , W   <- Key 2
+    {0, CS7_SW4,  CS8_SW4,  CS9_SW4  },  //  7  +    , E   <- Key 3
+    {0, CS4_SW5,  CS5_SW5,  CS6_SW5  },  //  8  4    , 4   <- Key Tab
+    {0, CS4_SW6,  CS5_SW6,  CS6_SW6  },  //  9  5    , 5   <- Key Q
+    {0, CS7_SW5,  CS8_SW5,  CS9_SW5  },  //  10 6    , R   <- Key W
+    {0, CS4_SW7,  CS5_SW7,  CS6_SW7  },  //  11 1    , 6   <- Key Caps Lock
+    {0, CS4_SW8,  CS5_SW8,  CS6_SW8  },  //  12 2    , 7   <- Key A
+    {0, CS7_SW7,  CS8_SW7,  CS9_SW7  },  //  13 3    , Y   <- Key S
+    {0, CS7_SW8,  CS8_SW8,  CS9_SW8  },  //  14 ENTER, U   <- Key D
+    {0, CS4_SW9,  CS5_SW9,  CS6_SW9  },  //  15 0    , 8   <- Key Shift_L
+    {0, CS7_SW9,  CS8_SW9,  CS9_SW9  },  //  16 .    , I   <- Key C
     {0, CS1_SW1,  CS2_SW1,  CS3_SW1  },  //  17 LED18, Esc
     {0, CS1_SW2,  CS2_SW2,  CS3_SW2  },  //  18 LED19, F1
     {0, CS1_SW3,  CS2_SW3,  CS3_SW3  },  //  19 LED20, F2
@@ -100,20 +100,11 @@ const aw_led g_aw_leds[DRIVER_LED_TOTAL] = {
 #define RGB_LAYOUT LAYOUT
 
 led_config_t g_led_config = {{
-    { 17,   0,   2,  24, ___, ___, ___, ___},
-    { 18,   1,   3,  25, ___, ___, ___, ___},
-    { 19,   4,   6,  26, ___, ___, ___, ___},
-    { 20,   5,   7,  27, ___, ___, ___, ___},
-    { 21,   8,  10,  28, ___, ___, ___, ___},
-    { 22,   9, ___,  29, ___, ___, ___, ___},
-    { 23,  11,  13,  30, ___, ___, ___, ___},
-    {___,  12,  14, ___, ___, ___, ___, ___},
-    {___,  15,  16, ___, ___, ___, ___, ___},
-    {___, ___, ___, ___, ___, ___, ___, ___},
-    {___, ___, ___, ___, ___, ___, ___, ___},
-    {___, ___, ___, ___, ___, ___, ___, ___},
-    {___, ___, ___, ___, ___, ___, ___, ___},
-    {___, ___, ___, ___, ___, ___, ___, ___}
+    { 0,   1,   2,   3  },
+    { 4,   5,   6,   7  },
+    { 8,   9,   10,  ___},
+    { 11,  12,  13,  14 },
+    { 15,  ___, ___, 16 }
 }, {
     {45,  0  },  //  0  NUM
     {90,  0  },  //  1  /
