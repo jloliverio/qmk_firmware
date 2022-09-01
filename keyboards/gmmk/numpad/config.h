@@ -47,7 +47,7 @@
 #define ENCODERS_PAD_B \
     { A2 }
 
-#define SLIDER_PIN B0
+#define SLIDER_PIN B0 //Not implemented
 
 /* Mechanical locking support. Use KC_LCAP, KC_LNUM or KC_LSCR instead in keymap */
 #define LOCKING_SUPPORT_ENABLE
@@ -62,6 +62,8 @@
 
 #define DRIVER_1_CS B12
 #define DRIVER_1_EN A15
+
+#define RGB_MATRIX_PW_EN B13
 
 #define DRIVER_COUNT 1
 
@@ -104,9 +106,12 @@
 #define ENABLE_RGB_MATRIX_PIXEL_RAIN
 #define ENABLE_RGB_MATRIX_PIXEL_FLOW
 #define ENABLE_RGB_MATRIX_PIXEL_FRACTAL
+
 // enabled only if RGB_MATRIX_FRAMEBUFFER_EFFECTS is defined
 #define ENABLE_RGB_MATRIX_TYPING_HEATMAP
 #define ENABLE_RGB_MATRIX_DIGITAL_RAIN
+
+#define RGB_MATRIX_KEYPRESSES // reacts to keypresses
 // enabled only of RGB_MATRIX_KEYPRESSES or RGB_MATRIX_KEYRELEASES is defined
 #define ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE
 #define ENABLE_RGB_MATRIX_SOLID_REACTIVE
